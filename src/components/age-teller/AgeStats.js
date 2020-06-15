@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import partyPopper from '../../assets/party-popper.jpg';
+import partyPopper from './assets/party-popper.jpg';
 
 class AgeStats extends Component {
   timeSince(date) {
