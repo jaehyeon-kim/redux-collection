@@ -1,0 +1,4 @@
+Redux
+* The store is one data object for the app
+* Reducers update the store
+* Actions activate reducers
