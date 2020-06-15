@@ -35,7 +35,7 @@ import rootReducer from './reducers';
 import RecipeFinder from './components/recipe-finder/RecipeFinder';
 
 const store = createStore(rootReducer);
-store.subscribe(() => console.log('store', store.getState()));
+// store.subscribe(() => console.log('store', store.getState()));
 
 ReactDOM.render(
   <Provider store={store}>
