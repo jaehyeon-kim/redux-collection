@@ -2,3 +2,9 @@ body {
   text-align: center;
   padding: 5%;
 }
+
+.link {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}

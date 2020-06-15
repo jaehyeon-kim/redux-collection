@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import RecipeItem from './RecipeItem';
 
 class RecipeList extends Component {
   render() {
     return (
       <div>
+        {this.props.favoriteRecipes.length > 0 ? (
+          <h4>
+            <Link className="link" to="/favorites">
+              Favorites
+            </Link>
+          </h4>
+        ) : (
+          <div></div>
+        )}
+
         {this.props.recipes.map((recipe, index) => {
           return (
-            <div key={index}>
-              <h4>{recipe.title}</h4>
-            </div>
+            <RecipeItem key={index} recipe={recipe} favoriteButton={true} />
           );
         })}
       </div>
@@ -20,6 +30,7 @@ class RecipeList extends Component {
 function mapStateToProps(state) {
   return {
     recipes: state.recipes,
+    favoriteRecipes: state.favoriteRecipes,
   };
 }
 
